@@ -5,8 +5,8 @@ class DogBreed < ActiveRecord::Base
 
     @@all = []
 
-    attr_reader :name, :activity_level, :allergy_compatible, :living_space_reqs
-    attr_accessor 
+    attr_reader :name
+    attr_accessor :activity_level, :allergy_compatible, :living_space_reqs
 
     def initialize(name, activity_level, allergy_compatible, living_space_reqs)
         @name = name
