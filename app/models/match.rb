@@ -5,19 +5,19 @@ class Match < ActiveRecord::Base
 
 
 
-    def self.dog_array
+    # def self.dog_array
 
         
-        dog_list = []
+    #     dog_list = []
 
-        DogBreed.all.each do |dog|
+    #     DogBreed.all.each do |dog|
         
-            dog_list << dog
+    #         dog_list << dog
         
-        end
+    #     end
 
-        return dog_list
-    end
+    #     return dog_list
+    # end
 
     def self.good_allergy_dog
 
@@ -33,19 +33,20 @@ class Match < ActiveRecord::Base
 
     end
 
-    # def self.user_dog_comparison(user)
+    def self.user_dog_comparison(user)
 
-    #     self.dog_array.select do |dog|
-    #          if dog.activity_level == user.activity_level
-    #             Match.create(user.id,dog.id)
-    #         #  elsif dog.allergy_compatible == t && user.allergy_compatible == t
-    #         #     Match.create(user.id,dog.id)
-    #         #  elsif dog.living_space_reqs == user.living_space_reqs
-    #         #     Match.create(user.id,dog.id)
-    #         end
-    #     end
+        DogBreed.all.select do |dog|
+             if dog.activity_level == user.activity_level
+                # binding.pry
+                Match.create(user_id: user.id, dog_breed_id: dog.id)
+            #  elsif dog.allergy_compatible == true && user.allergy_compatible == true
+            #     Match.create(user_id: user.id, dog_breed_id: dog.id)
+            #  elsif dog.living_space_reqs == user.living_space_reqs
+            #     Match.create(user_id: user.id, dog_breed_id: dog.id)
+            end
+        end
 
-    # end
+    end
 
 
 

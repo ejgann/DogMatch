@@ -14,9 +14,9 @@ user_1.living_space_question
 
 user_1.allergy_question
 
-test = Match.user_dog_test_comparison(user_1)
+# test = Match.user_dog_test_comparison(user_1)
 
-# Match.user_dog_comparison(user_1)
+Match.user_dog_comparison(user_1)
 
 binding.pry
 0
