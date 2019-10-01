@@ -17,15 +17,15 @@ class User < ActiveRecord::Base
             if activity_input.downcase == "a"
         
                     self.activity_level = "Highly active"
-                
+                    self.save
                 elsif activity_input.downcase == "b"
         
                     self.activity_level = "Moderately active"
-                
+                    self.save
                 elsif activity_input.downcase == "c"
         
                     self.activity_level = "I don't get off the couch"
-                            
+                    self.save
                 else
         
                     puts "That is not an option. Please enter a letter to select."
@@ -52,23 +52,23 @@ class User < ActiveRecord::Base
             if living_space_input.downcase == "a"
         
                     self.living_space_reqs = "Apartment"
-                
+                    self.save
                 elsif living_space_input.downcase == "b"
         
                     self.living_space_reqs = "Townhome"
-                
+                    self.save
                 elsif living_space_input.downcase == "c"
         
                     self.living_space_reqs = "Single Family Home"
-                            
+                    self.save
                 elsif living_space_input.downcase == "d"
         
                     self.living_space_reqs = "Farm"
-                            
+                    self.save
                 elsif living_space_input.downcase == "e"
         
                     self.living_space_reqs = "Car/ Homeless"
-                            
+                    self.save
                 else
         
                     puts "That is not an option. Please enter a letter to select."
@@ -92,11 +92,11 @@ class User < ActiveRecord::Base
             if allergy_input.downcase == "a" || allergy_input.downcase == "yes"
         
                     self.allergy_compatible = true
-                
+                    self.save
                 elsif allergy_input.downcase == "b" || allergy_input.downcase == "no"
         
                     self.allergy_compatible = false
-                            
+                    self.save
                 else
         
                     puts "That is not an option. Please enter a letter or yes/no to select."
