@@ -1,20 +1,8 @@
 class Match < ActiveRecord::Base
 
-    belongs_to :dog_breed, :person
+    belongs_to :dog_breed
+    belongs_to :user
 
-    @@all = []
-
-    attr_accessor :person, :dog_breed
-
-    def initialize(person, dog_breed)
-        @person = person
-        @dog_breed = dog_breed
-        @@all << self
-    end
-
-    def self.all
-        @@all
-    end
 
 
 end

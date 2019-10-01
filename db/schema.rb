@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "living_space_reqs"
   end
 
-  create_table "match", force: :cascade do |t|
-    t.integer "person_id"
+  create_table "matches", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "dog_breed_id"
   end
 
-  create_table "person", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "activity_level"
     t.boolean "allergy_compatible"

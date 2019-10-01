@@ -11,3 +11,4 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'database_cleaner'
 gem 'rest-client'
+
