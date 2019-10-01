@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
     
     def activity_question
         puts "What is your typical activity level?
-        A. Highly active
-        B. Moderately active
+        A. Highly Active
+        B. Moderately Active
         C. I don't get off the couch"
 
         activity_input = gets.chomp
@@ -35,6 +35,76 @@ class User < ActiveRecord::Base
         end
     end
     
+    def living_space_question
+        puts "What is your living space like?
+        A. Apartment
+        B. Townhome
+        C. Single Family Home
+        D. Farm
+        E. Car/ Homeless"
+
+        living_space_input = gets.chomp
+        living_space_assignment(living_space_input)
+    end
+
+    def living_space_assignment(living_space_input)
+
+            if living_space_input.downcase == "a"
+        
+                    self.living_space_reqs = "Apartment"
+                
+                elsif living_space_input.downcase == "b"
+        
+                    self.living_space_reqs = "Townhome"
+                
+                elsif living_space_input.downcase == "c"
+        
+                    self.living_space_reqs = "Single Family Home"
+                            
+                elsif living_space_input.downcase == "d"
+        
+                    self.living_space_reqs = "Farm"
+                            
+                elsif living_space_input.downcase == "e"
+        
+                    self.living_space_reqs = "Car/ Homeless"
+                            
+                else
+        
+                    puts "That is not an option. Please enter a letter to select."
+        
+                    living_space_question
+
+        end
+    end
+
+    def allergy_question
+        puts "Do you have any dog allergies?
+        A. Yes
+        B. No"
+
+        allergy_input = gets.chomp
+        allergy_assignment(allergy_input)
+    end
+
+    def allergy_assignment(allergy_input)
+
+            if allergy_input.downcase == "a" || allergy_input.downcase == "yes"
+        
+                    self.allergy_compatible = true
+                
+                elsif allergy_input.downcase == "b" || allergy_input.downcase == "no"
+        
+                    self.allergy_compatible = false
+                            
+                else
+        
+                    puts "That is not an option. Please enter a letter or yes/no to select."
+        
+                    allergy_question
+
+        end
+    end
 
 end
 

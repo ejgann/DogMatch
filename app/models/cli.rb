@@ -1,7 +1,7 @@
-class Cli < ActiveRecord::Base
+class Cli
 
-    def self.greeting
-        puts "hello what is your name"
+    def greeting
+        puts "Hello what is your name?"
     end
 
 end
