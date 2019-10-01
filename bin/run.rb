@@ -18,7 +18,7 @@ user_1.allergy_question
 
 Match.user_dog_comparison(user_1)
 
-binding.pry
-0
+# binding.pry
+# 0
 
 

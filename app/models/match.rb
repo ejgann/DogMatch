@@ -3,22 +3,6 @@ class Match < ActiveRecord::Base
     belongs_to :dog_breed
     belongs_to :user
 
-
-
-    # def self.dog_array
-
-        
-    #     dog_list = []
-
-    #     DogBreed.all.each do |dog|
-        
-    #         dog_list << dog
-        
-    #     end
-
-    #     return dog_list
-    # end
-
     def self.good_allergy_dog
 
         DogBreed.where("allergy_compatible = t")
