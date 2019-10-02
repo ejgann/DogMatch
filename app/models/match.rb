@@ -21,8 +21,14 @@ class Match < ActiveRecord::Base
 
         DogBreed.all.select do |dog|
              if dog.activity_level == user.activity_level && 
-                dog.allergy_compatible == user.allergy_compatible &&
-                dog.living_space_reqs >= user.living_space_reqs &&
+                user.living_space_reqs >= dog.living_space_reqs &&
+
+                if user.allergy_compatible == false
+                    dog.allergy_compatible == true || dog.allergy_compatible == false
+                elsif user.allergy_compatible == true
+                    dog.allergy_compatible == true
+                end 
+
                 # binding.pry
 
                 Match.create(user_id: user.id, dog_breed_id: dog.id)

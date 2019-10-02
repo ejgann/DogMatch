@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
     has_many :matches
     has_many :dog_breeds, through: :matches
-    
+
     def activity_question
         puts "What is your typical activity level?
         A. Highly Active
@@ -107,9 +107,3 @@ class User < ActiveRecord::Base
     end
 
 end
-
-
-    # PERSON -- methods
-    # create new person
-    # build out person's information (allergies, living space, activity level)
-    # match dog_breed to person
