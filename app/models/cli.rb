@@ -13,7 +13,7 @@ class Cli
     end
 
     def greeting
-        puts "Hello what is your name?"
+        puts "Hello, what is your name?"
     end
 
 end
