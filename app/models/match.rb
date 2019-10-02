@@ -33,7 +33,6 @@ class Match < ActiveRecord::Base
 
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
-                # Match.show_dogs(dog)
                 puts "You matched with #{dog.name}."
                 
             end

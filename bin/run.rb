@@ -5,17 +5,17 @@ cli.title
 cli.greeting
 user_input = gets.chomp
 
-user_1 = User.create(name: user_input) 
+user = User.create(name: user_input) 
 
-user_1.activity_question
+user.activity_question
 
 # binding.pry
 
-user_1.living_space_question
+user.living_space_question
 
-user_1.allergy_question
+user.allergy_question
 
-Match.user_dog_comparison(user_1)
+Match.user_dog_comparison(user)
 
 # binding.pry
 # 0

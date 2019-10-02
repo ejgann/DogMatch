@@ -16,21 +16,24 @@ class User < ActiveRecord::Base
 
             if activity_input.downcase == "a"
         
-                    self.activity_level = "Highly active"
-                    self.save
-                elsif activity_input.downcase == "b"
-        
-                    self.activity_level = "Moderately active"
-                    self.save
-                elsif activity_input.downcase == "c"
-        
-                    self.activity_level = "I don't get off the couch"
-                    self.save
-                else
-        
-                    puts "That is not an option. Please enter a letter to select."
-        
-                    activity_question
+                self.activity_level = "Highly Active"
+                self.save
+
+            elsif activity_input.downcase == "b"
+    
+                self.activity_level = "Moderately Active"
+                self.save
+
+            elsif activity_input.downcase == "c"
+    
+                self.activity_level = "I don't get off the couch"
+                self.save
+                
+            else
+    
+                puts "That is not an option. Please enter a letter to select."
+    
+                activity_question
 
         end
     end
