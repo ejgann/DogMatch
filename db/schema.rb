@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "name"
     t.string "activity_level"
     t.boolean "allergy_compatible"
-    t.string "living_space_reqs"
+    t.integer "living_space_reqs"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "name"
     t.string "activity_level"
     t.boolean "allergy_compatible"
-    t.string "living_space_reqs"
+    t.integer "living_space_reqs"
   end
 
 end

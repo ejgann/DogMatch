@@ -51,23 +51,23 @@ class User < ActiveRecord::Base
 
             if living_space_input.downcase == "a"
         
-                    self.living_space_reqs = "Apartment"
+                    self.living_space_reqs = 2
                     self.save
                 elsif living_space_input.downcase == "b"
         
-                    self.living_space_reqs = "Townhome"
+                    self.living_space_reqs = 3
                     self.save
                 elsif living_space_input.downcase == "c"
         
-                    self.living_space_reqs = "Single Family Home"
+                    self.living_space_reqs = 4
                     self.save
                 elsif living_space_input.downcase == "d"
         
-                    self.living_space_reqs = "Farm"
+                    self.living_space_reqs = 5
                     self.save
                 elsif living_space_input.downcase == "e"
         
-                    self.living_space_reqs = "Car/ Homeless"
+                    self.living_space_reqs = 1
                     self.save
                 else
         
