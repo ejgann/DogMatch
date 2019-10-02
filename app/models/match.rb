@@ -13,7 +13,7 @@ class Match < ActiveRecord::Base
                 if user.allergy_compatible == false
                     dog.allergy_compatible == true || dog.allergy_compatible == false
                 elsif user.allergy_compatible == true
-                    dog.allergy_compatible == true
+                    dog.allergy_compatible == true &&
                 
                 if user.children_compatible == false
                     dog.children_compatible == true || dog.children_compatible == false
