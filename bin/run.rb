@@ -1,28 +1,45 @@
 require_relative '../config/environment.rb'
 cli = Cli.new
 
-cli.title
-cli.greeting
-user_input = gets.chomp
 
-user = User.create(name: user_input) 
+loop do
 
-puts "\n"
+        cli.title
+        cli.greeting
+        user_input = gets.chomp
 
-user.activity_question
+        user = User.create(name: user_input) 
 
-# binding.pry
+        puts "\n"
 
-user.living_space_question
+        user.activity_question
 
-user.allergy_question
+        # binding.pry
 
-puts "\n**************************************************\n\n"
+        user.living_space_question
 
-Match.user_dog_comparison(user)
+        user.allergy_question
 
-puts "\n**************************************************\n\n"
+        puts "\n**************************************************\n\n"
 
+        Match.user_dog_comparison(user)
+
+        puts "\n**************************************************\n\n"
+
+    puts "Would you like to run this app again?"
+
+    restart = gets.chomp
+    puts "\n"
+
+    if restart == "no"
+
+        puts "Thanks for using our application!\n\n"
+
+        break
+    end
+
+
+end
 # binding.pry
 # 0
 
