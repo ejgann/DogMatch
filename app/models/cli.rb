@@ -16,4 +16,31 @@ class Cli
         puts "Hello what is your name?"
     end
 
+    def loop_method
+
+        puts "Would you like to run this app again? (yes|no)"
+
+        restart = gets.chomp
+        puts "\n"
+
+        if restart == "no"
+
+            puts "Thanks for using our application!\n\n"
+
+        elsif restart != "yes"
+            until restart == "yes" || restart == "no" do
+                puts "That is not an option, please enter yes or no"
+
+                puts "Would you like to run this app again? (yes|no)"
+
+                restart = gets.chomp
+                puts "\n"
+            end
+
+        end
+        
+        return restart
+
+    end
+
 end
