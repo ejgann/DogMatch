@@ -2,19 +2,19 @@ class User < ActiveRecord::Base
     has_many :matches
     has_many :dog_breeds, through: :matches
 
-    @@al = ""
-    def self.get_al
-        @@al
+    @@act_level = ""
+    def self.get_act_level
+        @@act_level
     end
 
-    @@lc = ""
-    def self.get_lc
-        @@lc
+    @@living_cond = ""
+    def self.get_living_cond
+        @@living_cond
     end
 
-    @@allerg = ""
-    def self.get_allerg
-        @@allerg
+    @@allergy = ""
+    def self.get_allergy
+        @@allergy
     end
 
     def activity_question
@@ -32,21 +32,21 @@ class User < ActiveRecord::Base
 
             if activity_input.downcase == "a"
         
-                @@al = "Are Highly Active."
+                @@act_level = "Are Highly Active."
 
                 self.activity_level = "Highly Active"
                 self.save
 
             elsif activity_input.downcase == "b"
     
-                @@al = "Are Moderately Active."
+                @@act_level = "Are Moderately Active."
 
                 self.activity_level = "Moderately Active"
                 self.save
 
             elsif activity_input.downcase == "c"
     
-                @@al = "Don't get off the couch."
+                @@act_level = "Don't get off the couch."
 
                 self.activity_level = "I don't get off the couch"
                 self.save
@@ -77,35 +77,35 @@ class User < ActiveRecord::Base
 
             if living_space_input.downcase == "a"
         
-                    @@lc = "Apartment."
+                    @@living_cond = "Apartment."
 
                     self.living_space_reqs = 2
                     self.save
 
                 elsif living_space_input.downcase == "b"
         
-                    @@lc = "Townhome."
+                    @@living_cond = "Townhome."
 
                     self.living_space_reqs = 3
                     self.save
 
                 elsif living_space_input.downcase == "c"
         
-                    @@lc = "Single Family Home."
+                    @@living_cond = "Single Family Home."
 
                     self.living_space_reqs = 4
                     self.save
 
                 elsif living_space_input.downcase == "d"
         
-                    @@lc = "Farm."
+                    @@living_cond = "Farm."
 
                     self.living_space_reqs = 5
                     self.save
 
                 elsif living_space_input.downcase == "e"
         
-                    @@lc = "Car/ Homeless."
+                    @@living_cond = "Car/ Homeless."
 
                     self.living_space_reqs = 1
                     self.save
@@ -133,14 +133,14 @@ class User < ActiveRecord::Base
 
             if allergy_input.downcase == "a" || allergy_input.downcase == "yes"
         
-                    @@allerg = "Are allergic to dogs."
+                    @@allergy = "Are allergic to dogs."
 
                     self.allergy_compatible = true
                     self.save
 
                 elsif allergy_input.downcase == "b" || allergy_input.downcase == "no"
         
-                    @@allerg = "Are not allergic to dogs."
+                    @@allergy = "Are not allergic to dogs."
 
                     self.allergy_compatible = false
                     self.save

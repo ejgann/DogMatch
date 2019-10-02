@@ -40,9 +40,9 @@ class Match < ActiveRecord::Base
 
         puts "\n"
         puts "These dogs are good for people who: "
-        puts User.get_al
-        puts "Live in a " + User.get_lc
-        puts User.get_allerg
+        puts User.get_act_level
+        puts "Live in a " + User.get_living_cond
+        puts User.get_allergy
                 
         puts "
                 |\\_/|                  
