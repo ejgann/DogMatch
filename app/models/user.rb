@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
         C. I don't get off the couch"
 
         activity_input = gets.chomp
+        puts "\n"
         activity_level_assignment(activity_input)
     end
 
@@ -28,7 +29,7 @@ class User < ActiveRecord::Base
     
                 self.activity_level = "I don't get off the couch"
                 self.save
-                
+
             else
     
                 puts "That is not an option. Please enter a letter to select."
@@ -47,6 +48,7 @@ class User < ActiveRecord::Base
         E. Car/ Homeless"
 
         living_space_input = gets.chomp
+        puts "\n"
         living_space_assignment(living_space_input)
     end
 
@@ -87,6 +89,7 @@ class User < ActiveRecord::Base
         B. No"
 
         allergy_input = gets.chomp
+        puts "\n"
         allergy_assignment(allergy_input)
     end
 

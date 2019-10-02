@@ -7,6 +7,8 @@ user_input = gets.chomp
 
 user = User.create(name: user_input) 
 
+puts "\n"
+
 user.activity_question
 
 # binding.pry
