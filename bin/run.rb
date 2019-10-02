@@ -17,6 +17,14 @@ user.living_space_question
 
 user.allergy_question
 
+user.children_question
+
+# user.training_question
+
+# user.barking_question
+
+
+
 puts "\n**************************************************\n\n"
 
 Match.user_dog_comparison(user)

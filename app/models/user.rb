@@ -118,34 +118,34 @@ end
 
 
 #  ##########  CHILDREN QUESTION ##########
-# def children_question
-#     puts "Do you have any children under 10 years of age?
-#     A. Yes
-#     B. No"
+def children_question
+    puts "Do you have any children under 10 years of age?
+    A. Yes
+    B. No"
 
-#     children_input = gets.chomp
-#     puts "\n"
-#     children_assignment(children_input)
-# end
+    children_input = gets.chomp
+    puts "\n"
+    children_assignment(children_input)
+end
 
-# def children_assignment(children_input)
+def children_assignment(children_input)
 
-#         if children_input.downcase == "a" || children_input.downcase == "yes"
+        if children_input.downcase == "a" || children_input.downcase == "yes"
     
-#                 self.children_compatible = true
-#                 self.save
-#             elsif children_input.downcase == "b" || children_input.downcase == "no"
+                self.children_compatible = true
+                self.save
+            elsif children_input.downcase == "b" || children_input.downcase == "no"
     
-#                 self.children_compatible = false
-#                 self.save
-#             else
+                self.children_compatible = false
+                self.save
+            else
     
-#                 puts "That is not an option. Please enter a letter or yes/no to select."
+                puts "That is not an option. Please enter a letter or yes/no to select."
     
-#                 children_question
+                children_question
 
-#     end
-# end
+    end
+end
 
 
 
