@@ -20,7 +20,7 @@ class Match < ActiveRecord::Base
     def self.user_dog_comparison(user)
 
         DogBreed.all.select do |dog|
-             if dog.activity_level == user.activity_level && 
+            if dog.activity_level == user.activity_level && 
                 user.living_space_reqs >= dog.living_space_reqs &&
 
                 if user.allergy_compatible == false
@@ -33,22 +33,25 @@ class Match < ActiveRecord::Base
 
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
-                puts "You matched with #{dog.name}."
-                
+                puts "You matched with #{dog.name}"
+
             end
+    
+        end
+
+            matches = false
+            Match.all.each do |match|
+                if match.user_id == user.id
+                    matches = true
+                end
+            end
+
+            if !matches
+
+            puts "Unfortunately we could not recommend any dogs for you."
+
         end
         
     end
     
-    
-    # def self.show_dogs(dog)
-    #     if 
-    #     else
-    #         puts "You did not matched with any dogs."
-
-    #     end
-
-    # end
-
-
 end
