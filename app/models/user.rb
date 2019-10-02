@@ -2,6 +2,21 @@ class User < ActiveRecord::Base
     has_many :matches
     has_many :dog_breeds, through: :matches
 
+    @@al = ""
+    def self.get_al
+        @@al
+    end
+
+    @@lc = ""
+    def self.get_lc
+        @@lc
+    end
+
+    @@allerg = ""
+    def self.get_allerg
+        @@allerg
+    end
+
     def activity_question
         puts "What is your typical activity level?
         A. Highly Active
@@ -17,16 +32,22 @@ class User < ActiveRecord::Base
 
             if activity_input.downcase == "a"
         
+                @@al = "Are Highly Active."
+
                 self.activity_level = "Highly Active"
                 self.save
 
             elsif activity_input.downcase == "b"
     
+                @@al = "Are Moderately Active."
+
                 self.activity_level = "Moderately Active"
                 self.save
 
             elsif activity_input.downcase == "c"
     
+                @@al = "Don't get off the couch."
+
                 self.activity_level = "I don't get off the couch"
                 self.save
 
@@ -56,24 +77,39 @@ class User < ActiveRecord::Base
 
             if living_space_input.downcase == "a"
         
+                    @@lc = "Apartment."
+
                     self.living_space_reqs = 2
                     self.save
+
                 elsif living_space_input.downcase == "b"
         
+                    @@lc = "Townhome."
+
                     self.living_space_reqs = 3
                     self.save
+
                 elsif living_space_input.downcase == "c"
         
+                    @@lc = "Single Family Home."
+
                     self.living_space_reqs = 4
                     self.save
+
                 elsif living_space_input.downcase == "d"
         
+                    @@lc = "Farm."
+
                     self.living_space_reqs = 5
                     self.save
+
                 elsif living_space_input.downcase == "e"
         
+                    @@lc = "Car/ Homeless."
+
                     self.living_space_reqs = 1
                     self.save
+
                 else
         
                     puts "That is not an option. Please enter a letter to select."
@@ -97,12 +133,18 @@ class User < ActiveRecord::Base
 
             if allergy_input.downcase == "a" || allergy_input.downcase == "yes"
         
+                    @@allerg = "Are allergic to dogs."
+
                     self.allergy_compatible = true
                     self.save
+
                 elsif allergy_input.downcase == "b" || allergy_input.downcase == "no"
         
+                    @@allerg = "Are not allergic to dogs."
+
                     self.allergy_compatible = false
                     self.save
+
                 else
         
                     puts "That is not an option. Please enter a letter or yes/no to select."

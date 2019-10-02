@@ -37,6 +37,12 @@ class Match < ActiveRecord::Base
             puts "Unfortunately we could not recommend any dogs for you."
 
         end
+
+        puts "\n"
+        puts "These dogs are good for people who: "
+        puts User.get_al
+        puts "Live in a " + User.get_lc
+        puts User.get_allerg
                 
         puts "
                 |\\_/|                  
