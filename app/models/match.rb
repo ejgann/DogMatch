@@ -39,6 +39,7 @@ class Match < ActiveRecord::Base
     
         end
 
+
             matches = false
             Match.all.each do |match|
                 if match.user_id == user.id
@@ -51,7 +52,17 @@ class Match < ActiveRecord::Base
             puts "Unfortunately we could not recommend any dogs for you."
 
         end
-        
+                
+        puts "
+                |\\_/|                  
+                | @ @   Woof! 
+                |   <>              _  
+                |  _/\\------____ ((| |))
+                |               `--' |   
+           _____|_       ___|   |___.' 
+          /_/_____/____/________|\n\n"
+
+
     end
     
 end

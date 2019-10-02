@@ -15,7 +15,11 @@ user.living_space_question
 
 user.allergy_question
 
+puts "\n**************************************************\n\n"
+
 Match.user_dog_comparison(user)
+
+puts "\n**************************************************\n\n"
 
 # binding.pry
 # 0
