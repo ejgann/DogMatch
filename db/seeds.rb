@@ -1,3 +1,7 @@
+Match.destroy_all
+User.destroy_all
+DogBreed.destroy_all
+
 
 affenpinscher = DogBreed.create(name: "Affenpinscher",activity_level: "I don't get off the couch",allergy_compatible: true, living_space_reqs: 2)
 

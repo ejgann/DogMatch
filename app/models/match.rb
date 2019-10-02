@@ -3,20 +3,6 @@ class Match < ActiveRecord::Base
     belongs_to :dog_breed
     belongs_to :user
 
-    def self.good_allergy_dog
-
-        DogBreed.where("allergy_compatible = t")
-    
-    end
-
-    def self.user_dog_test_comparison(user)
-
-        self.dog_array.select do |dog|
-            dog if dog.activity_level == user.activity_level
-        end
-
-    end
-
     def self.user_dog_comparison(user)
 
         DogBreed.all.select do |dog|
@@ -38,7 +24,6 @@ class Match < ActiveRecord::Base
             end
     
         end
-
 
             matches = false
             Match.all.each do |match|
