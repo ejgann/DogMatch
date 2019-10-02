@@ -14,8 +14,6 @@ until restart == "no" do
 
             user.activity_question
 
-            # binding.pry
-
             user.living_space_question
 
             user.allergy_question
@@ -29,7 +27,3 @@ until restart == "no" do
             restart = cli.loop_method
 
 end
-# binding.pry
-# 0
-
-

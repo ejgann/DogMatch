@@ -5,7 +5,7 @@ class Match < ActiveRecord::Base
 
     def self.user_dog_comparison(user)
 
-        DogBreed.all.select do |dog|
+        DogBreed.all.each do |dog|
             if dog.activity_level == user.activity_level && 
                 user.living_space_reqs >= dog.living_space_reqs &&
 
@@ -14,8 +14,6 @@ class Match < ActiveRecord::Base
                 elsif user.allergy_compatible == true
                     dog.allergy_compatible == true
                 end 
-
-                # binding.pry
 
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
