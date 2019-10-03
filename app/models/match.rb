@@ -15,6 +15,7 @@ class Match < ActiveRecord::Base
                 elsif user.allergy_compatible == true
                     dog.allergy_compatible == true &&
                 
+                
                 if user.children_compatible == false
                     dog.children_compatible == true || dog.children_compatible == false
                 elsif user.children_compatible == true
@@ -27,6 +28,8 @@ class Match < ActiveRecord::Base
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
                 puts "You matched with #{dog.name}"
+
+                
             
                 end
 
@@ -57,7 +60,7 @@ class Match < ActiveRecord::Base
            _____|_       ___|   |___.' 
           /_/_____/____/________|\n\n"
 
-
+        
     end
     
 end
