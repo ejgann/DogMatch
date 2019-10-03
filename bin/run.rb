@@ -18,7 +18,15 @@ until restart == "no" do
 
             user.allergy_question
 
-            puts "\n**************************************************\n\n"
+            user.children_question
+
+# user.training_question
+
+# user.barking_question
+
+
+
+puts "\n**************************************************\n\n"
 
             puts "MATCHES: \n"
             Match.user_dog_comparison(user)
