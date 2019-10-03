@@ -49,6 +49,7 @@ class Match < ActiveRecord::Base
         puts User.get_act_level
         puts "Live in a " + User.get_living_cond
         puts User.get_allergy
+        puts User.get_children
                 
         puts "
                 |\\_/|                  

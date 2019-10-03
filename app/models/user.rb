@@ -17,6 +17,11 @@ class User < ActiveRecord::Base
         @@allergy
     end
 
+    @@children = ""
+    def self.get_children
+        @@children
+    end
+
     def activity_question
         puts "What is your typical activity level?
         A. Highly Active
@@ -168,10 +173,14 @@ class User < ActiveRecord::Base
     
             if children_input.downcase == "a" || children_input.downcase == "yes"
         
+                    @@children = "Have Children."
+
                     self.children_compatible = true
                     self.save
                 elsif children_input.downcase == "b" || children_input.downcase == "no"
         
+                    @@children = "Don't Have Children."
+
                     self.children_compatible = false
                     self.save
                 else
