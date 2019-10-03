@@ -22,6 +22,12 @@ class User < ActiveRecord::Base
         @@children
     end
 
+    @@barking = ""
+    def self.get_barking
+        @@barking
+    end
+
+    ##########  Activity Level QUESTION ##########
     def activity_question
         puts "What is your typical activity level?
         A. Highly Active
@@ -65,6 +71,7 @@ class User < ActiveRecord::Base
         end
     end
     
+    ##########  Living Space QUESTION ##########
     def living_space_question
         puts "What is your living space like?
         A. Apartment
@@ -124,6 +131,7 @@ class User < ActiveRecord::Base
         end
     end
 
+    ##########  Allergy QUESTION ##########
     def allergy_question
         puts "Do you have any dog allergies?
         A. Yes
@@ -159,6 +167,7 @@ class User < ActiveRecord::Base
         end
     end
 
+    ##########  Children QUESTION ##########
     def children_question
         puts "Do you have any children under 10 years of age?
         A. Yes
@@ -190,6 +199,51 @@ class User < ActiveRecord::Base
                     children_question
     
             end
+    end
+
+    ##########  BARKING QUESTION ##########
+    def barking_question
+        puts "How well do you tolerate a dog barking?
+        A. I require minimal barking
+        B. Some barking is fine
+        C. I can handle any level of barking"
+
+
+        barking_input = gets.chomp
+        puts "\n"
+        barking_assignment(barking_input)
+    end
+
+    def barking_assignment(barking_input)
+
+        if barking_input.downcase == "a"
+            
+                    @@barking = "Requires Minimal Barking."
+
+                    self.barking_reqs = 1
+                    self.save
+
+                elsif barking_input.downcase == "b"
+
+                    @@barking = "Allow Some barking."
+                    
+                    self.barking_reqs = 2
+                    self.save
+                    
+                elsif barking_input.downcase == "c"
+                    
+                    @@barking = "Allow Any level of barking."
+
+                    self.barking_reqs = 3
+                    self.save
+
+                else
+        
+                    puts "That is not an option. Please enter a letter to select."
+        
+                    barking_question
+
+        end
     end
 
 end

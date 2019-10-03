@@ -8,6 +8,8 @@ class Match < ActiveRecord::Base
         DogBreed.all.each do |dog|
             if dog.activity_level == user.activity_level && 
                 user.living_space_reqs >= dog.living_space_reqs &&
+                 user.barking_reqs >= dog.barking_reqs &&
+
 
                 if user.allergy_compatible == false
                     dog.allergy_compatible == true || dog.allergy_compatible == false
@@ -50,6 +52,7 @@ class Match < ActiveRecord::Base
         puts "Live in a " + User.get_living_cond
         puts User.get_allergy
         puts User.get_children
+        puts User.get_barking
                 
         puts "
                 |\\_/|                  

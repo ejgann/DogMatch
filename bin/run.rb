@@ -20,9 +20,9 @@ until restart == "no" do
 
             user.children_question
 
+            user.barking_question
 # user.training_question
 
-# user.barking_question
 
 
 

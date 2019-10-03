@@ -6,6 +6,7 @@ class CreateDogBreed < ActiveRecord::Migration[5.2]
         t.boolean :allergy_compatible
         t.integer :living_space_reqs
         t.boolean :children_compatible
+        t.integer :barking_reqs
 
       end
     end
