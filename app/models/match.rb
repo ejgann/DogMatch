@@ -12,20 +12,20 @@ class Match < ActiveRecord::Base
                 if user.allergy_compatible == false
                     dog.allergy_compatible == true || dog.allergy_compatible == false
                 elsif user.allergy_compatible == true
-                    dog.allergy_compatible == true &&
-                
+                    dog.allergy_compatible == true 
+                end && 
+                    
+
                 if user.children_compatible == false
                     dog.children_compatible == true || dog.children_compatible == false
                 elsif user.children_compatible == true
                   dog.children_compatible == true               
-                
-                end 
+                end
 
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
                 puts "You matched with #{dog.name}"
             
-                end
 
             end
     

@@ -18,7 +18,7 @@ until restart == "no" do
 
             user.allergy_question
 
-user.children_question
+            user.children_question
 
 # user.training_question
 

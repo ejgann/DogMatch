@@ -180,7 +180,7 @@ class User < ActiveRecord::Base
         
                     children_question
     
-        end
+            end
     end
 
 end
