@@ -20,6 +20,7 @@ until restart == "no" do
 
             puts "\n**************************************************\n\n"
 
+            puts "MATCHES: \n"
             Match.user_dog_comparison(user)
 
             puts "\n**************************************************\n\n"
