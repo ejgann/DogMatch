@@ -23,10 +23,7 @@ until restart == "no" do
             user.barking_question
 # user.training_question
 
-
-
-
-puts "\n**************************************************\n\n"
+            puts "\n**************************************************\n\n"
 
             puts "MATCHES: \n"
             Match.user_dog_comparison(user)
