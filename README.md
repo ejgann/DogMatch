@@ -29,5 +29,5 @@ Whether you are a current dog owner or are looking to adopt one for the first ti
         - Barking is matched based on an integer system from 1 - 3. If a user requires minimal barking(1) then any dogs that barking moderately to alot(2+) would not match. But any dog that doesn't bark much(1) would match.
 
 ## Developers: 
-Nick Boober
-Emily Gann
+- Nick Boober
+- Emily Gann
