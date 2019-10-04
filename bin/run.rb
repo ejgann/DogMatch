@@ -23,12 +23,12 @@ until restart == "no" do
             user.barking_question
 # user.training_question
 
-            puts "\n**************************************************\n\n"
+            puts Rainbow("\n**************************************************\n\n").yellow
 
-            puts "MATCHES: \n"
+            puts Rainbow("MATCHES: \n").orange
             Match.user_dog_comparison(user)
 
-            puts "\n**************************************************\n\n"
+            puts Rainbow("\n**************************************************\n\n").yellow
 
             restart = cli.loop_method
 

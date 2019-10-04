@@ -11,4 +11,4 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'database_cleaner'
 gem 'rest-client'
-
+gem 'rainbow', '~> 3.0'

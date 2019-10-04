@@ -32,7 +32,7 @@ class Match < ActiveRecord::Base
                 # If all requirements are true create an Match instance between user and dog and output dog names
                 Match.create(user_id: user.id, dog_breed_id: dog.id)
 
-                puts "You matched with #{dog.name}"
+                puts Rainbow("You matched with #{dog.name}").orange
             
 
             end
@@ -49,7 +49,7 @@ class Match < ActiveRecord::Base
 
             if !matches
 
-            puts "Unfortunately we could not recommend any dogs for you."
+            puts Rainbow("Unfortunately we could not recommend any dogs for you.").orange
 
         end
 
@@ -62,14 +62,14 @@ class Match < ActiveRecord::Base
         puts User.get_children
         puts User.get_barking
                 
-        puts "
+        puts Rainbow("
                 |\\_/|                  
                 | @ @   Woof! 
                 |   <>              _  
                 |  _/\\------____ ((| |))
                 |               `--' |   
            _____|_       ___|   |___.' 
-          /_/_____/____/________|\n\n"
+          /_/_____/____/________|\n\n").aqua
 
 
     end

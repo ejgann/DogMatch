@@ -31,7 +31,8 @@ class User < ActiveRecord::Base
 
     ##########  Activity Level QUESTION ##########
     def activity_question
-        puts "What is your typical activity level?
+        puts Rainbow("What is your typical activity level?").green
+        puts"
         A. Highly Active
         B. Moderately Active
         C. I don't get off the couch"
@@ -75,7 +76,8 @@ class User < ActiveRecord::Base
     
     ##########  Living Space QUESTION ##########
     def living_space_question
-        puts "What is your living space like?
+        puts Rainbow("What is your living space like?").green
+        puts "
         A. Apartment
         B. Townhome
         C. Single Family Home
@@ -135,7 +137,8 @@ class User < ActiveRecord::Base
 
     ##########  Allergy QUESTION ##########
     def allergy_question
-        puts "Do you have any dog allergies?
+        puts Rainbow("Do you have any dog allergies?").green
+        puts "
         A. Yes
         B. No"
 
@@ -171,7 +174,8 @@ class User < ActiveRecord::Base
 
     ##########  Children QUESTION ##########
     def children_question
-        puts "Do you have any children under 10 years of age?
+        puts Rainbow("Do you have any children under 10 years of age?").green
+        puts "
         A. Yes
         B. No"
     
@@ -205,7 +209,8 @@ class User < ActiveRecord::Base
 
     ##########  BARKING QUESTION ##########
     def barking_question
-        puts "How well do you tolerate a dog barking?
+        puts Rainbow("How well do you tolerate a dog barking?").green
+        puts "
         A. I require minimal barking
         B. Some barking is fine
         C. I can handle any level of barking"

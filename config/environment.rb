@@ -4,6 +4,7 @@ Bundler.require
 require 'active_record'
 require 'rake'
 require 'rest_client'
+require 'rainbow'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
