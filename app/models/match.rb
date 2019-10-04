@@ -3,9 +3,10 @@ class Match < ActiveRecord::Base
     belongs_to :dog_breed
     belongs_to :user
 
-    # dog_breed = []
+    
     def self.user_dog_comparison(user)
-        
+        array = []
+
         DogBreed.all.each do |dog|
             if dog.activity_level == user.activity_level && 
                 user.living_space_reqs >= dog.living_space_reqs &&
@@ -20,7 +21,7 @@ class Match < ActiveRecord::Base
 
                 puts "You matched with #{dog.name}"
 
-                # dog.name << dog_breed
+                array << dog.name
                 # binding.pry
             end
     
@@ -53,8 +54,8 @@ class Match < ActiveRecord::Base
                 |               `--' |   
            _____|_       ___|   |___.' 
           /_/_____/____/________|\n\n"
-
-       
+        # binding.pry
+          return array
     end
-    # return dog_breed
+    
 end
