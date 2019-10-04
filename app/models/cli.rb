@@ -1,19 +1,19 @@
 class Cli
 
     def title
-        puts "
+        puts Rainbow("
         ____              __  __       _       _     
        |  _ \\  ___   __ _|  \\/  | __ _| |_ ___| |__  
        | | | |/ _ \\ / _` | |\\/| |/ _` | __/ __| '_ \\ 
        | |_| | (_) | (_| | |  | | (_| | || (__| | | |
        |____/ \\___/ \\__, |_|  |_|\\__,_|\\__\\___|_| |_|
-                    |___/                            "
+                    |___/                            ").blue
 
-        puts "\n      ************************************************\n\n"
+        puts Rainbow("\n      ************************************************\n\n").blue
     end
 
     def greeting
-        puts "Hello, what is your name?"
+        puts Rainbow("Hello, what is your name?").green
     end
 
     def loop_method
@@ -25,7 +25,7 @@ class Cli
 
         if restart == "no"
 
-            puts "Thanks for using our application!\n\n"
+            puts Rainbow("Thanks for using our application!\n\n").orange
 
         elsif restart != "yes"
             until restart == "yes" || restart == "no" do
