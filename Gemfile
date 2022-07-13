@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # gem "rails"
 gem 'require_all'
 gem 'sqlite3'
-gem 'activerecord', "~>5.2.3"
+gem 'activerecord', "~>5.2.8"
 gem 'rspec'
 gem 'pry'
 gem 'sinatra-activerecord'
